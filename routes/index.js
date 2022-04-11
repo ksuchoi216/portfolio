@@ -2,9 +2,6 @@ var express = require('express');
 var router = express.Router();
 const path = require('path');
 
-// Have Node serve the files for our built React app
-router.use(express.static(path.join(__dirname, 'client/build')));
-
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
